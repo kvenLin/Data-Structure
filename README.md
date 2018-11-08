@@ -11,7 +11,7 @@
     * 如何删除元素?
     * 基于Java的数组,二次等装属于我们自己的数组类
     
-![数组图示](https://github.com/kvenLin/Data-Structure/images/选区_023.png)
+![数组图示](https://github.com/kvenLin/Data-Structure/tree/master/images/选区_023.png)
 
 * 使用泛型
     * 数据结构可以放置"任何"数据类型
@@ -50,18 +50,18 @@
 * 只能从一端添加元素,也只能从另一端取元素
 * 取元素这一端称为栈顶
 
-![栈图示](https://github/kvenLin/Data-Structure/images/选区_024.png)
+![栈图示](https://github.com/kvenLin/Data-Structure/tree/master/images/选区_024.png)
 
 ### 栈的应用
 
-![栈图示](https://github/kvenLin/Data-Structure/images/选区_025.png)
+![栈图示](https://github.com/kvenLin/Data-Structure/tree/master/images/选区_025.png)
 
 * 无处不再的Undo操作(编辑器撤销)
 * 程序调用的系统栈:用于记录程序中断的地方,当子函数执行完后中断记录进行出栈,回到之前中断的地方继续执行
 * 括号匹配 - 编译器检查代码时的应用
     * 思路:栈顶元素反映了在嵌套的层次关系中,最近的需要匹配的元素
 
-[括号匹配算法:Solution](https://github/kvenLin/Data-Structure/Stack/Solution.java)
+[括号匹配算法:Solution](https://github.com/kvenLin/Data-Structure/tree/master/Stack/Solution.java)
 
 ### 栈的实现
 
