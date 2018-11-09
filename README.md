@@ -50,7 +50,6 @@
 * 只能从一端添加元素,也只能从另一端取元素
 * 取元素这一端称为栈顶
 
-![栈图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_024.png)
 
 ### 栈的应用
 
@@ -58,7 +57,7 @@
 * 无处不再的Undo操作(编辑器撤销)
 * 程序调用的系统栈:用于记录程序中断的地方,当子函数执行完后中断记录进行出栈,回到之前中断的地方继续执行
 
-![栈图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_025.png)
+![栈图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_024.png)
 
 * 括号匹配 - 编译器检查代码时的应用
     * 思路:栈顶元素反映了在嵌套的层次关系中,最近的需要匹配的元素
@@ -101,3 +100,69 @@
 ![数组队列图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_027.png)
 
 ![数组队列图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_028.png)
+
+## 链表
+* 简单的动态的数据结构
+* 更加深入的理解引用(或者指针)
+* 更深入的理解递归
+
+![数组队列图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_029.png)
+
+优点:真正的动态,不需要处理固定容量的问题
+
+缺点:丧失了随机访问的能力(即不能更具给定的索引来立即取出元素)
+
+1.在链表头添加元素
+* node.next = head
+* head = node
+
+2.在链表中间添加元素:
+* 需要一个prev指针,进行遍历
+* 生成一个新的node
+* node.next = prev.next
+* prev.next = node
+* *关键*:
+    * 找到要添加的节点的前一个节点
+    * 两步操作不能调换
+
+![数组队列图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_030.png)
+
+3.虚拟头节点
+* 有意的设置一个为null的dummyHead
+* 即浪费一个空间为后续编写逻辑的方便
+
+![数组队列图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_031.png)
+
+4.删除某一链表元素
+* 找到要删除的前一个元素的位置prev
+* prev.next = delNode.next
+* 释放将删除的指针与链表断开联系使得JVM能够进行垃圾回收: delNode.next = null
+
+![数组队列图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_032.png)
+
+![数组队列图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_033.png)
+
+### 链表时间复杂度分析
+* 增删改查的复杂度都是O(n)
+* 如果只是对链表头进行操作:O(1)
+
+### 使用链表实现栈
+[链表栈的实现示例](https://github.com/kvenLin/Data-Structure/tree/master/Stack/src/LinkedListStack.java)
+
+[数组栈和链表栈的性能测试](https://github.com/kvenLin/Data-Structure/tree/master/Stack/src/Main.java)
+
+两种栈的耗时点:
+* 数组栈主要在缩容和扩容的地方需要对元素进行遍历赋值
+* 链表需要对每个添加的元素进行new操作来添加新的空间
+* 相对优异的比较需要综合考量,差异不是很大
+
+### 使用链表实现队列
+[链表队列的实现示例](https://github.com/kvenLin/Data-Structure/tree/master/Queue/src/LinkedListQueue.java)
+* 队列需要在队尾添加元素,在队首删除元素
+* 链表需要两个指针一个head,一个tail
+* head端为队首,tail端为队尾
+
+![数组队列图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_034.png)
+
+
+
