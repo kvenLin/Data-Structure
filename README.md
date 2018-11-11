@@ -164,5 +164,21 @@
 
 ![数组队列图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_034.png)
 
+### 链表算法
+[LeetCode203题链表移除指定元素:Solution2](https://github.com/kvenLin/Data-Structure/tree/master/LinkedList/src/Solution2.java)
 
+### 链表和递归
+#### 递归
+* 本质上,将原来的问题,转换为更小的问题
+* 列举:数组求和
+    * Sum(arr[0...n-1]) = arr[0] + Sum(arr[1...n-1])
+    * Sum(arr[1...n-1]) = arr[1] + Sum(arr[2...n-1])
+    * ...
+* 注意递归函数的"宏观"语意
+* 递归函数就是一个函数,完成一个功能
+#### 链表天然的递归性
+* 解决链表中删除元素的问题
 
+![链表递归进行删除元素图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_035.png)
+
+[解决函数方法](https://github.com/kvenLin/Data-Structure/tree/master/LinkedList/src/Solution3.java)
