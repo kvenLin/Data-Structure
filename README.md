@@ -149,7 +149,7 @@
 ### 使用链表实现栈
 [链表栈的实现示例](https://github.com/kvenLin/Data-Structure/tree/master/Stack/src/LinkedListStack.java)
 
-[数组栈和链表栈的性能测试](https://github.com/kvenLin/Data-Structure/tree/master/Stack/src/Main.java)
+[数组栈和链表栈的性能测试](https://github.com/kvenLin/Data-Structure/tree/master/Stack/src/FileOperation.java)
 
 两种栈的耗时点:
 * 数组栈主要在缩容和扩容的地方需要对元素进行遍历赋值
@@ -234,4 +234,26 @@
     2. 删除的节点右子树为null
     3. 删除节点的左右子树都不为null(两种思路:1.删除当前节点后找前驱节点,2.删除当前节点后找后继节点)
 ![删除二分搜索树任意节点](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_040.png)
+
+## 集合
+
+集合的特点:去重
+
+回忆二分搜索树,是不能存放重复的元素的,所以二分搜索树是实现集合非常好的底层数据结构
+
+Set\<E>
+* void add(E) //不能添加重复元素
+* void remove(E)
+* void boolean contains(E)
+* int getSize()
+* boolean isEmpty()
+
+### 典型应用:
+* 客户统计
+* 词汇量的统计
+
+### 集合的时间复杂度分析
+* 增 add LinkedListSet:O(n) , BSTSet:O(h)=O(logn)
+* 查 contains LinkedListSet:O(n) , BSTSet:O(h)=O(logn)
+* 删 remove LinkedListSet:O(n) , BSTSet:O(h)=O(logn)
 
