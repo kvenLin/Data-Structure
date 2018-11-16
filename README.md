@@ -257,3 +257,36 @@ Set\<E>
 * 查 contains LinkedListSet:O(n) , BSTSet:O(h)=O(logn)
 * 删 remove LinkedListSet:O(n) , BSTSet:O(h)=O(logn)
 
+## 映射 Map
+* 存储(键,值) 数据对的数据结构(key,value)
+* 非常容易使用链表或者二分搜索树来实现
+* Map<K,V>
+    * void add(K,V)
+    * V remove(K)
+    * boolean contains(K)
+    * V get(K)
+    * void set(K,V)
+    * int getSize()
+    * boolean isEmpty()
+* [链表实现Map映射](https://github.com/kvenLin/Data-Structure/tree/master/Map/src/LinkedListMap.java)
+* [二分搜索树实现Map映射](https://github.com/kvenLin/Data-Structure/tree/master/Map/src/BSTMap.java)
+
+### 典型应用
+* 词频统计
+
+### 映射的时间复杂度分析
+
+![删除二分搜索树任意节点](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_041.png)
+
+### 映射类型
+* 有序映射:键具有顺序
+* 无序映射:键没有顺序
+* 多重映射:键可以重复
+### 集合和映射的关系
+
+常见的底层实现:基于映射的底层实现直接包装出集合来
+
+`util包中的HashSet的底层实现就是通过HashMap来实现的`
+
+
+
