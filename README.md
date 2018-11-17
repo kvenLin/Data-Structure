@@ -288,5 +288,57 @@ Set\<E>
 
 `util包中的HashSet的底层实现就是通过HashMap来实现的`
 
+## 堆和优先队列
+
+### 优先队列
+* 普通队列: 先进先出;后进后出
+* 优先队列: 出队顺序和入队顺序无关;和优先级相关
+* 为什么使用优先队列?
+    * 动态选择优先级最高的任务执行
+    * 游戏中的AI攻击最近目标
+* Interface Queue<E> <---implement---- PriorityQueue\<E>
+    * void enqueue(E)
+    * E dequeue() //出队为优先级最高的元素
+    * E getFront()
+    * int getSize()
+    * boolean isEmpty()
+    
+* 时间复杂度分析:
+
+![有先队列入队出队时间复杂度分析](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_043.png)
+
+### 堆的基本结构
+#### 二叉堆 Binary Heap
+* 二叉堆是一棵**完全二叉树**
+    * 完全二叉树: 把元素顺序排列成树的形状
+    * 区别于满二叉树:满二叉树是有多少层就确定了有多少个节点
+    * 最大堆: 根节点值大于等于其所有子节点的值
+    * 最小堆: 与最大堆相反,根节点小于等于其所有字节点的值
+    * 注意: **层次低的节点的值不一定大于层次高的节点的值**,所以节点大小与层次无关
+    
+![二叉堆性质](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_044.png)
+
+#### 用数组存储二叉堆
+* 存放方式1:
+
+![数组存储二叉堆](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_045.png)
+
+* 存放方式2:
+
+![数组存储二叉堆](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_046.png)
+
+#### Heapify的算法复杂度
+* 将n个元素逐个插入到一个空堆中,算法复杂度是O(nlogn)
+* heapify的过程,算法复杂度为O(n)
+
+### 优先队列的经典问题
+* 在1000000个元素中嗯如何选出前100名?
+    * 在N个元素中选出前M个元素
+    * 使用排序的时间复杂度--> NlogN
+    * 使用有限队列时间复杂度--> NlogM
+    * 使用优先队列,维护当前看到的前M个元素
+    * 需要使用最小堆
+* [LeetCode-347题,使用自定义的优先队列来求前k个频次最高的元素](https://github.com/kvenLin/Data-Structure/tree/master/MaxHeap/src/Solution.java)
+* [LeetCode-347题,使用java中的优先队列来求前k个频次最高的元素](https://github.com/kvenLin/Data-Structure/tree/master/347-LeetCode/src/Solution.java)
 
 

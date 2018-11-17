@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/347-LeetCode/347-LeetCode.iml" filepath="$PROJECT_DIR$/347-LeetCode/347-LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/349-LeetCode/349-LeetCode.iml" filepath="$PROJECT_DIR$/349-LeetCode/349-LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/350-LeetCode/350-LeetCode.iml" filepath="$PROJECT_DIR$/350-LeetCode/350-LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/804-LeetCode/804-LeetCode.iml" filepath="$PROJECT_DIR$/804-LeetCode/804-LeetCode.iml" />
@@ -10,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Data-Structure.iml" filepath="$PROJECT_DIR$/.idea/Data-Structure.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedList/LinkedList.iml" filepath="$PROJECT_DIR$/LinkedList/LinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/Map/Map.iml" filepath="$PROJECT_DIR$/Map/Map.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MaxHeap/MaxHeap.iml" filepath="$PROJECT_DIR$/MaxHeap/MaxHeap.iml" />
       <module fileurl="file://$PROJECT_DIR$/Queue/Queue.iml" filepath="$PROJECT_DIR$/Queue/Queue.iml" />
       <module fileurl="file://$PROJECT_DIR$/Set/Set.iml" filepath="$PROJECT_DIR$/Set/Set.iml" />
       <module fileurl="file://$PROJECT_DIR$/Stack/Stack.iml" filepath="$PROJECT_DIR$/Stack/Stack.iml" />
