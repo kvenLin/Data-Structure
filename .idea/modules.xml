@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/211-LeetCode/211-LeetCode.iml" filepath="$PROJECT_DIR$/211-LeetCode/211-LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/303-LeetCode/303-LeetCode.iml" filepath="$PROJECT_DIR$/303-LeetCode/303-LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/307-LeetCode/307-LeetCode.iml" filepath="$PROJECT_DIR$/307-LeetCode/307-LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/347-LeetCode/347-LeetCode.iml" filepath="$PROJECT_DIR$/347-LeetCode/347-LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/349-LeetCode/349-LeetCode.iml" filepath="$PROJECT_DIR$/349-LeetCode/349-LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/350-LeetCode/350-LeetCode.iml" filepath="$PROJECT_DIR$/350-LeetCode/350-LeetCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/677-LeetCode/677-LeetCode.iml" filepath="$PROJECT_DIR$/677-LeetCode/677-LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/804-LeetCode/804-LeetCode.iml" filepath="$PROJECT_DIR$/804-LeetCode/804-LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/Array/Array.iml" filepath="$PROJECT_DIR$/Array/Array.iml" />
       <module fileurl="file://$PROJECT_DIR$/BST/BST.iml" filepath="$PROJECT_DIR$/BST/BST.iml" />
@@ -18,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/SegmentTree/SegmentTree.iml" filepath="$PROJECT_DIR$/SegmentTree/SegmentTree.iml" />
       <module fileurl="file://$PROJECT_DIR$/Set/Set.iml" filepath="$PROJECT_DIR$/Set/Set.iml" />
       <module fileurl="file://$PROJECT_DIR$/Stack/Stack.iml" filepath="$PROJECT_DIR$/Stack/Stack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Trie/Trie.iml" filepath="$PROJECT_DIR$/Trie/Trie.iml" />
     </modules>
   </component>
 </project>

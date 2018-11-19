@@ -369,6 +369,17 @@ Set\<E>
 ### 线段树的懒惰更新
 ![线段树的懒惰更新](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_051.png)
 
+## Trie 字典树 前缀树
+### 什么是Trie
+
+![字典树和Trie树](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_052.png)
+
+![Trie树的图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_053.png)
+
+### 有关Trie的算法题
+* [LeetCode-211题,添加与搜索单词-数据结构设计](https://github.com/kvenLin/Data-Structure/tree/master/211-LeetCode/src/WordDictionary.java)
+* [LeetCode-677题,Trie实现键值映射](https://github.com/kvenLin/Data-Structure/tree/master/677-LeetCode/src/MapSum.java)
+
 
 
 
