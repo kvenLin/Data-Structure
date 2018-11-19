@@ -340,5 +340,35 @@ Set\<E>
     * 需要使用最小堆
 * [LeetCode-347题,使用自定义的优先队列来求前k个频次最高的元素](https://github.com/kvenLin/Data-Structure/tree/master/MaxHeap/src/Solution.java)
 * [LeetCode-347题,使用java中的优先队列来求前k个频次最高的元素](https://github.com/kvenLin/Data-Structure/tree/master/347-LeetCode/src/Solution.java)
+## 线段树 Segment Tree
+### 为什么使用线段树
+* 经典的区间染色问题?
+* 另一类经典问题:区间查询
+    * 例如:2017年注册用户中消费最高的用户?
+    * 消费最多的用户?
+    * 学习时间最长的用户?
+### 时间复杂度分析
+![时间复杂度分析](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_047.png)
+### 什么是线段树
+* 线段树不是完全二叉树
+* 线段树是平衡二叉树
+    * 定义: 对于整棵树来说,最大深度与最小的深度之间相差最多只能为1
+    * 堆也是平衡二叉树(完全二叉树,一定满足平衡二叉树)
+![线段树图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_048.png)
+### 线段树使用数组实现
+* 如果区间有n个元素,数组表示需要多少个节点?    需要4n的空间
+* 我们的线段树不考虑添加元素,即区间固定,使用4n的静态空间即可
+
+![数组实现线段树](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_049.png)
+### 使用线段树进行区域查询
+* [LeetCode-303题,使用线段树进行区域查询](https://github.com/kvenLin/Data-Structure/tree/master/303-LeetCode/src/NumArray.java)
+* [LeetCode-303题,不使用线段树进行区域查询](https://github.com/kvenLin/Data-Structure/tree/master/303-LeetCode/src/NumArray2.java)
+### 使用线段树进行更新操作
+* [LeetCode-307题,不使用线段树进行更新](https://github.com/kvenLin/Data-Structure/tree/master/307-LeetCode/src/NumArray.java)
+* [LeetCode-307题,使用线段树进行更新](https://github.com/kvenLin/Data-Structure/tree/master/307-LeetCode/src/NumArray2.java)
+### 线段树的懒惰更新
+![线段树的懒惰更新](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_051.png)
+
+
 
 
