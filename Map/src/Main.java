@@ -34,5 +34,11 @@ public class Main {
         Map<String,Integer> listMap = new LinkedListMap<>();
         double time2 = testMap(listMap,filename);
         System.out.println("running BST map :" + time2 + "s");
+
+        System.out.println();
+        AVLMap<String,Integer> avlMap = new AVLMap<>();
+        double time3 = testMap(avlMap,filename);
+        System.out.println("running AVLMap map :" + time3 + "s");
+
     }
 }

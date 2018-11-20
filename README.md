@@ -186,7 +186,7 @@
 ## 树结构
 
 主要数结构:
-* 二分搜索树(Binary Search Tree)
+* 二分搜索树(**Binary Search Tree**)
 * 平衡二叉树: AVL;红黑树
 * 堆;并查集
 * 线段树;Trie(字典树,前缀树):主要用于处理字符串数据
@@ -200,11 +200,11 @@
 * 每个节点的右孩子树也是二叉树
 * 二叉树不一定是"满"的
 
-#### 二分搜索树
+#### 二分搜索树 Binary Search Tree
 * 二分搜索树是二叉树
 * 二分搜索树的每一个节点的值:
-    * 大于其左子树的所有节点的值
-    * 小于其右子树的所有节点的值
+    * **大于其左子树的所有节点的值**
+    * **小于其右子树的所有节点的值**
 * 每一棵子树也是二分搜索树
 * 存储的元素具有可比较性
 
@@ -351,8 +351,8 @@ Set\<E>
 ![时间复杂度分析](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_047.png)
 ### 什么是线段树
 * 线段树不是完全二叉树
-* 线段树是平衡二叉树
-    * 定义: 对于整棵树来说,最大深度与最小的深度之间相差最多只能为1
+* **线段树是平衡二叉树**
+    * 定义: **对于整棵树来说,最大深度与最小的深度之间相差最多只能为1**
     * 堆也是平衡二叉树(完全二叉树,一定满足平衡二叉树)
 ![线段树图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_048.png)
 ### 线段树使用数组实现
@@ -405,5 +405,35 @@ Set\<E>
 ### 解决连接问题
 * 网络中节点间的连接状态
     * 网络是一个抽象的概念: 用户之间形成的网络
+## 平衡二叉树和AVL树
+### AVL中的平衡二叉树定义
+* 定义: **对于任意一个节点,左子树和右子树的高度差不能超过1**
+* 是一种能够实现自平衡的树
 
+![AVL定义平衡二叉树的图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_056.png)
+
+### 使用平衡因子来判断是否是AVL的平衡二叉树
+* 维护平衡思路: 
+    * 平衡被破坏只可能发生在插入元素的过程中,导致父节点的高度改变
+    * 所以应该在加入节点后,沿着节点向上维护平衡性
+* 判断条件: **左右子树的平衡因子做差再取绝对值 <= 1** ,则表示是平衡二叉树,否则不是
+
+![非平衡二叉树视图](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_058.png)
+### 自平衡的维护
+* LL : 插入节点为不平衡节点的左孩子的左孩子
+    * 解决方法 : 右旋转 rightRotate(node)
+
+![右旋转过程](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_059.png)
+* RR : 插入节点为不平衡节点的右孩子的右孩子
+    * 解决方法 : 左旋转 leftRotate(node)
+
+![左旋转过程](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_060.png)
+* LR : 新插入的节点为不平衡节点的左孩子的右孩子
+    * 解决方法 : 先对x进行左旋转得到LL的情况,然后再参照LL的处理方式对y进行右旋转
+
+![LR的图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_061.png)
+
+![LR对x进行左旋转之后](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_062.png)
+* RL : 新插入的节点为不平衡的节点的右孩子的左孩子
+    * 解决方法 : 先对x进行右旋转得到RR的情况,然后再参照RR的处理方式对y进行左旋转
 
