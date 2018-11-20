@@ -313,7 +313,7 @@ Set\<E>
     * 完全二叉树: 把元素顺序排列成树的形状
     * 区别于满二叉树:满二叉树是有多少层就确定了有多少个节点
     * 最大堆: 根节点值大于等于其所有子节点的值
-    * 最小堆: 与最大堆相反,根节点小于等于其所有字节点的值
+    * 最小堆: 与最大堆相反,根节点小于等于其所有子节点的值
     * 注意: **层次低的节点的值不一定大于层次高的节点的值**,所以节点大小与层次无关
     
 ![二叉堆性质](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_044.png)
@@ -380,6 +380,30 @@ Set\<E>
 * [LeetCode-211题,添加与搜索单词-数据结构设计](https://github.com/kvenLin/Data-Structure/tree/master/211-LeetCode/src/WordDictionary.java)
 * [LeetCode-677题,Trie实现键值映射](https://github.com/kvenLin/Data-Structure/tree/master/677-LeetCode/src/MapSum.java)
 
+## 并查集 Union Find
+### 主要接口实现
+* 对于一组数据,主要支持两个动作:
+    * union(p,q) , 将这两个数据和这两个数据的集合连接起来
+    * isConnected(p,q) , 查询这两个数据是否属于同一个集合 ----> find(p) == find(q)
+#### 并查集实现
+* [Quick Find 数组结构实现并查集](https://github.com/kvenLin/Data-Structure/tree/master/UnionFind/src/UnionFind1.java)
+* [Quick Union 树结构实现并查集](https://github.com/kvenLin/Data-Structure/tree/master/UnionFind/src/UnionFind2.java)
+* [并查集基于size的优化,即元素少的向元素多的合并](https://github.com/kvenLin/Data-Structure/tree/master/UnionFind/src/UnionFind3.java)
+* [并查集基于rank的优化,即深度低的向深度高的合并](https://github.com/kvenLin/Data-Structure/tree/master/UnionFind/src/UnionFind4.java)
+* [并查集基于路径压缩的优化,即降低树的高度](https://github.com/kvenLin/Data-Structure/tree/master/UnionFind/src/UnionFind5.java)
+* [并查集路径压缩,使用递归压缩至一层](https://github.com/kvenLin/Data-Structure/tree/master/UnionFind/src/UnionFind6.java)
 
+并查集实现:
+
+![并查集的图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_054.png)
+
+路径压缩:
+
+![并查集路径压缩的图示](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_055.png)
+
+
+### 解决连接问题
+* 网络中节点间的连接状态
+    * 网络是一个抽象的概念: 用户之间形成的网络
 
 

@@ -21,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/Set/Set.iml" filepath="$PROJECT_DIR$/Set/Set.iml" />
       <module fileurl="file://$PROJECT_DIR$/Stack/Stack.iml" filepath="$PROJECT_DIR$/Stack/Stack.iml" />
       <module fileurl="file://$PROJECT_DIR$/Trie/Trie.iml" filepath="$PROJECT_DIR$/Trie/Trie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UnionFind/UnionFind.iml" filepath="$PROJECT_DIR$/UnionFind/UnionFind.iml" />
     </modules>
   </component>
 </project>
