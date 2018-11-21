@@ -437,3 +437,58 @@ Set\<E>
 * RL : 新插入的节点为不平衡的节点的右孩子的左孩子
     * 解决方法 : 先对x进行右旋转得到RR的情况,然后再参照RR的处理方式对y进行左旋转
 
+## 红黑树(统计性能更优)
+### 定义
+* 每个节点或者是红色的,或者是黑色的
+* **根节点是黑色的**
+* **每个叶子节点(最后的空节点)是黑色的**
+* **如果一个节点是红色的,那么他的孩子节点都是黑色的**
+* **从任意一个节点到叶子节点,经过的黑色节点是一样的**
+
+![红黑树](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_064.png)
+
+### 红黑树与2-3树的等价性
+#### 2-3树
+* **满足二分搜索树的基本性质**
+* 节点可以存放一个元素或两个元素
+* 每一个节点或者有2个孩子或者有3个孩子---2-3树由来
+* **2-3树是一种绝对平衡的树**,即左右子树的高度是一定相等的
+
+![2-3树](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_063.png)
+#### 红黑树实现2-3树
+* 对节点进行标为红色表示该节点和父亲节点是一个并列的关系,一起存放在3节点中
+* 所有红色节点都是左倾斜的
+* 红黑树是保持"黑平衡"的二叉树,**严格意义上,不是平衡二叉树**
+
+![红黑树来表示2-3树的结构](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_065.png)
+
+![2-3树转-红黑树示例](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_066.png)
+
+### 添加一个新的元素
+* 添加新元素可能发生的情况:
+    * 2-3树中添加一个新元素
+    * 或者添加进2-节点,形成一个3-节点
+    * 或者添加进3-节点,暂时形成一个4-接地那
+    * 永远添加红色节点
+* 颜色的翻转
+
+step1:
+![p1](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_067.png)
+step2:
+![p2](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_068.png)
+step3:
+![p3](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_069.png)
+* 右旋转
+
+step1:
+![p1](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_070.png)
+step2:
+![p2](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_071.png)
+step3:
+![p3](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_072.png)
+step4:
+![p4](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_073.png)
+* 左旋转(类似右旋转)
+* 总体流程
+
+![添加一个新的元素总体流程](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_074.png)
