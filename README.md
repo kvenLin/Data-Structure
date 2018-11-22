@@ -482,13 +482,94 @@ step3:
 
 step1:
 ![p1](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_070.png)
+
 step2:
 ![p2](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_071.png)
+
 step3:
 ![p3](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_072.png)
+
 step4:
 ![p4](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_073.png)
 * 左旋转(类似右旋转)
 * 总体流程
 
 ![添加一个新的元素总体流程](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_074.png)
+
+## 哈希表
+### 特点
+* 本质:多个键值对
+* 通过哈希函数将"键"转换为"索引"
+* 复杂度为O(1)
+### 哈希函数的设计
+* 整型
+    * 小范围的正整数直接使用
+    * 小范围的负整数进行偏移 -100~100----> 0~200
+    * 大整数
+        * 通常做法:取模
+        * 一个简单的通用的解决办法:模一个素数
+* 浮点型
+    * 在计算机中都是32位或64位的二进制表示
+    * 所以可以将浮点数转成整型处理
+* 字符串
+    * 转成整型处理
+    
+![字符串求哈希](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_078.png)
+* 设计原则
+    * 一致性: 如果a==b,则hash(a) == hash(b)
+    * 高效性: 计算高效便捷
+    * 均匀性: 哈希值均匀分布
+### 哈希冲突的处理 
+* 链地址法
+    * 注:TreeMap的底层实现就是红黑树
+    * 总共有M个地址
+    * 如果放入哈希表的元素为N
+    * 如果每个地址是链表: O(N/M)
+    * 如果每个地址是平衡树: O(log(N/M))
+    
+    ![解决哈希冲突](https://raw.githubusercontent.com/kvenLin/Data-Structure/master/images/选区_079.png)
+    * 改进:
+        * 和静态数组一样
+        * 固定地址空间是不合理的
+        * 需要resize
+    * 设计:
+        * 平均每个地址承载的元素多过一定的程度,即扩容--> N / M >= upperTol
+        * 平均每个地址承载的元素少过一定的程度,即缩容--> N / M < lowerTol
+        * 平均复杂度O(1)
+        * 每个操作在O(lowerTol) ~ O(upperTol)
+    * 扩容后续问题
+        * 扩容会是M = 2 * M,即M不再是素数了
+        * [参考方案,引入常量素数数组](https://github.com/kvenLin/Data-Structure/tree/master/HashTable/src/HashTable.java)
+        * 哈希表:均摊复杂度为O(1),牺牲了什么? 顺序性
+      
+* **开放地址法**
+    * 每一个地址都对添加的元素进行开放,只是必须按照规则进行添加
+    * 采用开放地址法的检测方式
+        * 线性探测法: 每次+1进行探测
+        * 平方探测法: +1 +4 +9 +16...
+        * 二次哈希
+        * 再哈希法: 当一个哈希函数产生的索引冲突,就使用另外一个哈希函数产生索引
+    * 即当发生冲突时就将添加在冲突元素后面的第一个空
+### 集合和映射
+* 有序的集合和有序的映射
+    * 平衡树: AVL树,红黑树,即标准库中的TreeMap和TreeSet
+* 无序的集合和无序的映射
+    * 哈希表
+## 总结
+* 线性结构
+    * 动态数组
+    * 普通队列
+    * 栈
+    * 链表
+    * 哈希表(开放地址法)
+* 树形结构
+    * 二叉树:
+        * 二分搜索树
+        * AVL树: 破坏平衡时以旋转方式进行维护
+        * 红黑树: 以2-3树的结构进行维护;统计性能更高
+        * 堆
+        * 线段树
+    * 多叉树:
+        * Trie
+        * 并查集
+    
